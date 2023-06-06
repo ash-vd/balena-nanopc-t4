@@ -1,0 +1,28 @@
+name: CI - Compile
+
+on:
+  push:
+    branches: [master, develop]
+
+jobs:
+  build-yocto:
+    runs-on: [self-hosted, linux, x64, yocto]
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Build Yocto Rootfs
+        run: |
+          ./balena-yocto-scripts/build/barys -m smarc-px30 --shared-downloads /yocto/shared-downloads --shared-sstate /yocto/shared-sstate
+
+      - name: Compress the output images
+        run: |
+          tar -czvf images.tar.gz -C ./build/tmp/deploy/images/smarc-px30 .
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: images
+          path: images.tar.gz
+          retention-days: 1
