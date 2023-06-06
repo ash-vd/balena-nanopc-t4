@@ -4,12 +4,11 @@
 [submodule "layers/meta-openembedded"]
 	path = layers/meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
-[submodule "layers/meta-nanopc-t4"]
-	path = layers/meta-nanopc-t4
-	url = https://github.com/balena-os/meta-nanopc-t4.git
+	branch = dunfell
 [submodule "layers/poky"]
 	path = layers/poky
 	url = https://github.com/balena-os/poky
+	branch = dunfell
 [submodule "layers/meta-balena"]
 	path = layers/meta-balena
 	url = https://github.com/balena-os/meta-balena.git
