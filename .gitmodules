@@ -4,11 +4,11 @@
 [submodule "layers/meta-openembedded"]
 	path = layers/meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
-	branch = dunfell
+	branch = kirkstone
 [submodule "layers/poky"]
 	path = layers/poky
 	url = https://github.com/balena-os/poky
-	branch = dunfell
+	branch = kirkstone
 [submodule "layers/meta-balena"]
 	path = layers/meta-balena
 	url = https://github.com/balena-os/meta-balena.git

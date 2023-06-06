@@ -1,7 +1,7 @@
 SUMMARY = "NanoPC-T4 kernel"
 DESCRIPTION = "FriendlyElec NanoPC-T4 machine kernel"
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/files/4.4.179:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/files/4.4.179:"
 
 LINUX_VERSION = "4.4.179"
 

@@ -20,7 +20,7 @@ module.exports =
 		machine: 'smarc-px30'
 		image: 'balena-image'
 		fstype: 'balenaos-img'
-		version: 'yocto-dunfell'
+		version: 'yocto-kirkstone'
 		deployArtifact: 'balena-image-smarc-px30.balenaos-img'
 		compressed: true
 

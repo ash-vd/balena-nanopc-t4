@@ -32,7 +32,8 @@ PACKAGES =+ " \
     ${PN}-bt \
 "
 
-FILES_${PN}-wifi = "/lib/firmware/rkwifi/*"
+FILES:${PN}-wifi = "/lib/firmware/rkwifi/*"
+
 
 do_deploy () {
     install -d ${DEPLOYDIR}/rkbin/tools

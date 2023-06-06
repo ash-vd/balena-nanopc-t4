@@ -14,18 +14,18 @@ SRCREV = "v2019.04"
 
 S = "${WORKDIR}/git"
 
-do_compile_append() {
+do_compile:append() {
     tools/mkimage -n rk3399 -T rksd -d ${DEPLOY_DIR_IMAGE}/rkbin/rk3399_ddr_800MHz_v1.14.bin idbloader.bin
     cat ${DEPLOY_DIR_IMAGE}/rkbin/rk3399_miniloader_v1.15.bin >> idbloader.bin
     ${DEPLOY_DIR_IMAGE}/rkbin/tools/loaderimage --pack --uboot ./u-boot-dtb.bin uboot.img 0x200000
 }
 
-do_install_append() {
+do_install:append() {
     install -d ${D}/boot
     install -c -m 0644 ${B}/idbloader.bin ${B}/uboot.img ${D}/boot
 }
 
-do_deploy_append() {
+do_deploy:append() {
     install ${B}/idbloader.bin ${DEPLOYDIR}
     install ${B}/uboot.img ${DEPLOYDIR}
 }

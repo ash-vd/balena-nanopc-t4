@@ -1,12 +1,12 @@
 SUMMARY = "LEC-PX30 kernel"
 DESCRIPTION = "ADLINK iPi LEC-PX30 kernel"
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/files/4.4.185:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/files/4.4.185:"
 
 LINUX_VERSION = "4.4.185"
 
 SRC_URI = " \
-    git://github.com/rockchip-linux/kernel.git;branch=develop-4.4 \
+    git://github.com/rockchip-linux/kernel.git;protocol=https;branch=develop-4.4 \
     file://adjust_wireless_firmware_path.patch \
 "
 SRCREV = "e83084b53d4e02f5fd25aad25b42ffd3108c7f15"

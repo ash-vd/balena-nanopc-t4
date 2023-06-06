@@ -1,4 +1,4 @@
-do_install_append(){
+do_install:append(){
     # The NanoPC-T4 has CONFIG_DW_WATCHDOG as built-in
     # When using systemd to pet the watchdog in addition to the above kernel watchdog driver,
     # it has been observed that after a random period of time the kernel will complain:
