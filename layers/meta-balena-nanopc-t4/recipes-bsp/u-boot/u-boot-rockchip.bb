@@ -9,7 +9,7 @@ DEPENDS:append = " bison-native rkbin "
 SRC_URI = " \
     git://github.com/u-boot/u-boot;protocol=https;branch=master \
 "
-SRCREV = "26659d426548d1c395ef878c3b820e53a6e3b346"
+SRCREV = "v2019.10"
 
 S = "${WORKDIR}/git"
 
