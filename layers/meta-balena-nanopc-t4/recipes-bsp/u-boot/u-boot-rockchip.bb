@@ -1,6 +1,6 @@
 DESCRIPTION = "FriendlyElec NanoPC-T4 U-Boot"
 LICENSE = "GPLv2+"
-LIC_FILES_CHKSUM = "file://Licenses/README;md5=30503fd321432fc713238f582193b78e"
+LIC_FILES_CHKSUM = "file://Licenses/README;md5=2ca5f2c35c8cc335f0a19756634782f1"
 
 require recipes-bsp/u-boot/u-boot.inc
 
@@ -9,7 +9,7 @@ DEPENDS:append = " bison-native rkbin "
 SRC_URI = " \
     git://github.com/u-boot/u-boot;protocol=https;branch=master \
 "
-SRCREV = "v2019.10"
+SRCREV = "fd4ed6b7e83ec3aea9a2ce21baea8ca9676f40dd"
 
 S = "${WORKDIR}/git"
 
