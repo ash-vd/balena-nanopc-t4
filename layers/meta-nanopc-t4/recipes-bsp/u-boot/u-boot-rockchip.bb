@@ -10,7 +10,8 @@ SRC_URI = " \
     git://github.com/u-boot/u-boot \
     file://nanopc-t4.patch \
 "
-SRCREV = "v2019.04"
+
+SRCREV = "d80bb749fab53da72c4a0e09b8c2d2aaa3103c91"
 
 S = "${WORKDIR}/git"
 
